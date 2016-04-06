@@ -7,7 +7,7 @@ use Goodby\CSV\Import\Standard\Interpreter;
 use Goodby\CSV\Import\Standard\LexerConfig;
 
 // the result comes into this variable
-$temperature = array();
+$patron = array();
 
 // set up lexer
 $config = new LexerConfig();
@@ -17,8 +17,8 @@ $lexer = new Lexer($config);
 
 // set up interpreter
 $interpreter = new Interpreter();
-$interpreter->addObserver(function(array $row) use (&$temperature) {
-    $temperature[] = array(
+$interpreter->addObserver(function(array $row) use (&$patron) {
+    $patron[] = array(
         'lastName' 	=> $row[0],
         'firstName'    	=> $row[1],
 	'instID'        => $row[2],
@@ -31,7 +31,6 @@ $interpreter->addObserver(function(array $row) use (&$temperature) {
 
 // parse
 $lexer->parse('patron.csv', $interpreter);
-//print_r($temperature);
-var_dump($temperature);
+var_dump($patron);
 
 ?>
