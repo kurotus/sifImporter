@@ -1,10 +1,26 @@
 <?php
+require_once __DIR__.'/vendor/autoload.php'; // load composer
+
+use Goodby\CSV\Import\Standard\LexerConfig; // include CSV tools
 include './conf/voyager_sif_definitions.php';
 // include './conf/voy2alma_mapping.php';
 /**
  * @param $simpleXmlObject
  * @return string
  */
+
+
+// Import configuration for goodby CSV
+$config = new LexerConfig();
+$config
+    ->setDelimiter("\t") // Customize delimiter. Default value is comma(,)
+    ->setEnclosure("'")  // Customize enclosure. Default value is double quotation(")
+    ->setEscape("\\")    // Customize escape character. Default value is backslash(\)
+    ->setToCharset('UTF-8') // Customize target encoding. Default value is null, no converting.
+    ->setFromCharset('SJIS-win') // Customize CSV file encoding. Default value is null.
+;
+
+
 function prettyPrint(SimpleXMLElement $simpleXmlObject){
     if( ! is_object($simpleXmlObject) ){
         return "";
