@@ -1,5 +1,5 @@
 <?php
-include './conf/voyager_sif_definition.php';
+include './conf/voyager_sif_definitions.php';
 // include './conf/voy2alma_mapping.php';
 /**
  * @param $simpleXmlObject
