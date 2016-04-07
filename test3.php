@@ -10,26 +10,26 @@ include './conf/voyager_sif_definitions.php';
 
 
 
-$patronID ="38479";
-$barcodeID ="56188";
-$barcode ="1010101010";
+$patronID ="";
+$barcodeID ="";
+$barcode ="";
 $empty ="";
 $patronGroup="esitt";
 $barcodeStatus="1";
-$barcodeModified="2012.12.05";
+$barcodeModified="2016.04.07";
 $patronExpire="2382.12.31";
 $patronPurge="2020.10.10";
 $voyagerDate="2010.05.26";
 $voyagerUpdated="2014.11.07";
-$instID="7777777777juhani";
+$instID="200383-xxx";
 $statCat="U";
 $nameType="1";
-$surName="Joutava";
-$firstName="Juhani";
-$middleName="J";
-$title="testi";
+$surName="Ulvova";
+$firstName="Ulla";
+$middleName="";
+$title="";
 $addressCount="2";
-$addressID="74320";
+$addressID="";
 $addressType="1"; //permanent
 $addressStatus="N"; //normal
 $addressBegin="2016.04.06";
@@ -39,16 +39,16 @@ $city="ROVANIEMI";
 $zipCode="96101";
 $country="";
 $phone="123";
-$email="kirjasto@ulapland.fi";
-$dateAdded="2014.11.07";
-$addressID2="125680";
+$email="lauda@ulapland.fi";
+$dateAdded="2016.04.12";
+$addressID2="";
 $addressType2="3";
-$addressBegin2="2002.08.29";
-$addressEnd2="2020.10.10";
+$addressBegin2="2016.04.07";
+$addressEnd2="2050.10.10";
 
 //$input = "2700012915";
 print str_pad($patronID, 10, "0", STR_PAD_LEFT);
-print str_pad($barcodeID, 10, "0", STR_PAD_LEFT);
+print str_pad($barcodeID, 10, " ", STR_PAD_LEFT);
 print str_pad($barcode, 25, " ",STR_PAD_RIGHT);
 print str_pad($patronGroup, 10, " ",STR_PAD_RIGHT);
 print str_pad($barcodeStatus, 1," ");
@@ -75,7 +75,7 @@ print str_pad($title,10," ",STR_PAD_RIGHT);
 //print str_pad($empty, 28, "0");
 //print (11);
 //print str_pad($empty, 15, "0");
-print str_pad($empty, 45,"0");
+print str_pad($empty, 65,"0");
 print str_pad($addressCount, 1, " ");
 print str_pad($addressID, 10, "0",STR_PAD_RIGHT);
 print str_pad($addressType, 1, " ");
@@ -89,6 +89,7 @@ print str_pad($empty,7, " ");
 print str_pad($zipCode,10, " ",STR_PAD_RIGHT);
 print str_pad($country,20, " ",STR_PAD_RIGHT);
 print str_pad($phone,25," ",STR_PAD_RIGHT);
+// Note that primary phone is - and mobi√le phone is actual numbe.
 print str_pad($empty,75," ");
 print str_pad($dateAdded,10," ");
 print str_pad($addressID2, 10, "0",STR_PAD_RIGHT);
