@@ -1,4 +1,15 @@
 <?php
+// Let's try to build a valid SIF file from scratch 
+// This is hand crafted, artisam SIF building y'all
+
+// This is the Base (Fixed) Segment of Record
+
+// Item 01: Patron id
+include './conf/voyager_sif_definitions.php';
+
+
+
+
 $patronID ="";
 $barcodeID ="";
 $barcode ="";
@@ -51,6 +62,5 @@ print str_pad($country,20, " ",STR_PAD_RIGHT);
 print str_pad($phone,25," ",STR_PAD_RIGHT);
 print str_pad($barcode,85," ");
 print "\n";
-
 // print str_pad($input, 40, "0", STR_PAD_LEFT); 
 ?>
