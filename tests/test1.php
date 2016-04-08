@@ -4,7 +4,7 @@
 
 
 require_once __DIR__.'/vendor/autoload.php'; // load composer
-include './conf/voyager_sif_definitions.php';
+include './conf/voyager_sif_definitions.php'; // load SIF definitions for future use
 
 
 use Goodby\CSV\Import\Standard\Lexer;
@@ -30,21 +30,19 @@ $interpreter->addObserver(function(array $row) use (&$patron) {
     );
 });
 
+// lets load our CSV
+// it has six columns as declared up
+// no format checking whatsoever
 $lexer->parse('export.csv', $interpreter);
-print_r($patron);
-//print ($patron[0]['firstname']);
 
+//print ($patron[0]['firstname']);
 //If we want to know how many rows we have in our data this is one way
 //$number = count($patron);
 //print ($number);
-
 //But we only want to do stuff for each row. This is one way:
 
-
-print_r(array_keys($patron));
+//Print each array row by row
 foreach ($patron as $k => $v) {
-//    echo "\$patron[$k] => $v.\n";
-//print ($patron[$k]['firstname']);
 print ($patron[$k]['firstname']."\n");
 print ($patron[$k]['surname']."\n");
 print ($patron[$k]['instid']."\n");
@@ -54,9 +52,6 @@ print ($patron[$k]['city']."\n");
 print ($patron[$k]['email']."\n");
 }
 
-//If we want to know how many rows we have in our data this is one way
-$number = count($patron);
-print ($number);
 
 ?>
 

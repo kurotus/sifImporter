@@ -1,4 +1,6 @@
 <?php
+// This doesn't do anything interesting. Here only for legacy reasons
+
 
 require_once __DIR__.'/vendor/autoload.php'; // load composer
 include './conf/voyager_sif_definitions.php';

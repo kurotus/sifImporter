@@ -1,15 +1,13 @@
 <?php
 // Let's try to build a valid SIF file from scratch 
 // This is hand crafted, artisam SIF building y'all
-
 // This is the Base (Fixed) Segment of Record
-
-// Item 01: Patron id
 include './conf/voyager_sif_definitions.php';
 
 
-
-
+// Define our patron information
+// Has more fields than required
+// See Voyager Technical manual for more information
 $patronID ="38479";
 $barcodeID ="56188";
 $barcode ="1010101010";
@@ -39,16 +37,17 @@ $city="ROVANIEMI";
 $zipCode="96101";
 $country="";
 $phone="123";
-$email="kirjasto@ulapland.fi";
+$email="library@acme.com";
 $dateAdded="2014.11.07";
 $addressID2="125680";
 $addressType2="3";
 $addressBegin2="2002.08.29";
 $addressEnd2="2020.10.10";
 
-//$input = "2700012915";
-print str_pad($patronID, 10, "0", STR_PAD_LEFT);
-print str_pad($barcodeID, 10, "0", STR_PAD_LEFT);
+//Let's print our patron record in sif
+
+print str_pad($patronID, 10, "0", STR_PAD_LEFT); //zero padded
+print str_pad($barcodeID, 10, "0", STR_PAD_LEFT); 
 print str_pad($barcode, 25, " ",STR_PAD_RIGHT);
 print str_pad($patronGroup, 10, " ",STR_PAD_RIGHT);
 print str_pad($barcodeStatus, 1," ");
