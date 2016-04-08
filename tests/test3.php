@@ -5,7 +5,7 @@
 // This is the Base (Fixed) Segment of Record
 
 // Item 01: Patron id
-include './conf/voyager_sif_definitions.php';
+//include './conf/voyager_sif_definitions.php';
 
 
 
