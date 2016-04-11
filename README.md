@@ -23,4 +23,4 @@ Basic currently takes a preformated CSV file from command-line and outputs patro
 
 ## License and copyright
 
-This project's source code is licensed under the terms of **GNU General Public License Version 3**.
+This project is licensed under the terms of **GNU General Public License Version 3**.
