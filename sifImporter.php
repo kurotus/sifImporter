@@ -99,8 +99,8 @@ fwrite($writeOutput,  str_pad($patronData[$key]["zip"],10, " ",STR_PAD_RIGHT));
 fwrite($writeOutput,  str_pad($country,20, " ",STR_PAD_RIGHT));
 fwrite($writeOutput,  str_pad($phone,25," ",STR_PAD_RIGHT));
 fwrite($writeOutput,  str_pad($mobilephone,25," ",STR_PAD_RIGHT));
-// Note that primary phone is - and mobile phone is actual number
-// this is not defined here yet.
+// Mobile phone is hidden in our library
+// Actual phone number is mobilephone
 fwrite($writeOutput,  str_pad($empty,50," "));
 fwrite($writeOutput,  str_pad($dateAdded,10," "));
 fwrite($writeOutput,  str_pad($addressID2, 10, "0",STR_PAD_RIGHT));
@@ -111,7 +111,7 @@ fwrite($writeOutput,  str_pad($addressEnd2,10," "));
 fwrite($writeOutput,  str_pad($patronData[$key]["email"],50, " "));
 fwrite($writeOutput,  str_pad($empty,337, " "));
 fwrite($writeOutput,  str_pad($voyagerUpdated,10," "));
-fwrite($writeOutput, PHP_EOL);
+fwrite($writeOutput, PHP_EOL); // EOL end of line/record
 //print '\n;
 // print str_pad($input, 40, "0", STR_PAD_LEFT);
 }
