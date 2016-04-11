@@ -57,26 +57,26 @@ foreach ($patronData as $key => $value)
 
 
 fwrite($writeOutput, str_pad($patronID, 10, "0", STR_PAD_LEFT)); // Zero filled, Voyager creates for new patrons
-print str_pad($barcodeID, 10, " ", STR_PAD_LEFT); // blank filled, Voyager creates
-print str_pad($barcode, 25, " ",STR_PAD_RIGHT); //blank filled, can be empty. added is the desk.
-print str_pad($patronData[$key]["patronGroup"], 10, " ",STR_PAD_RIGHT); // Valid patron group
-print str_pad($barcodeStatus, 1," "); // 1=active 2=lost 3=stolen 4=expired 5=other
-print str_pad($barcodeModified, 10, " ",STR_PAD_RIGHT); //modified data. hardcoded here but sysdate is better
-print str_pad($empty, 122, " "); //other barcodes. See manual for more information
-print str_pad($patronExpire,10," "); //expire date
-print str_pad($patronData[$key]["purgeDate"],10," "); //purge date
-print str_pad($voyagerDate,10," "); //run-date of the load if new patron
-print str_pad($voyagerUpdated,10," "); //run-date of the load
-print str_pad($empty,10," "); //circulation happening location. not required
-print str_pad($patronData[$key]["instid"], 30, " ",STR_PAD_RIGHT); //Institution id acts as a key for us.
-print str_pad($empty, 11, " "); //SSN in US format. Not used .
-print str_pad($patronData[$key]["statCat"], 3, " ", STR_PAD_RIGHT); // Statistical Category. Defined in SYSADMIN
-print str_pad($empty, 27, " "); //Rest of the statcats, we don't use.
-print str_pad($nameType, 1, " "); //1=personal 2=institutional
-print str_pad($patronData[$key]["surname"], 30, " ", STR_PAD_RIGHT); //patron surname
-print str_pad($patronData[$key]["firstname"], 20, " ", STR_PAD_RIGHT); //patron fist name
-print str_pad($middleName, 20, " ",STR_PAD_RIGHT); // patron middle name
-print str_pad($title,10," ",STR_PAD_RIGHT); // patron title
+fwrite($writeOutput, str_pad($barcodeID, 10, " ", STR_PAD_LEFT); // blank filled, Voyager creates
+fwrite($writeOutput,  str_pad($barcode, 25, " ",STR_PAD_RIGHT); //blank filled, can be empty. added is the desk.
+fwrite($writeOutput,  str_pad($patronData[$key]["patronGroup"], 10, " ",STR_PAD_RIGHT); // Valid patron group
+fwrite($writeOutput,  str_pad($barcodeStatus, 1," "); // 1=active 2=lost 3=stolen 4=expired 5=other
+fwrite($writeOutput,  str_pad($barcodeModified, 10, " ",STR_PAD_RIGHT); //modified data. hardcoded here but sysdate is better
+fwrite($writeOutput,  str_pad($empty, 122, " ")); //other barcodes. See manual for more information
+fwrite($writeOutput,  str_pad($patronExpire,10," ")); //expire date
+fwrite($writeOutput,  str_pad($patronData[$key]["purgeDate"],10," ")); //purge date
+fwrite($writeOutput,  str_pad($voyagerDate,10," ")); //run-date of the load if new patron
+fwrite($writeOutput,  str_pad($voyagerUpdated,10," ")); //run-date of the load
+fwrite($writeOutput,  str_pad($empty,10," ")); //circulation happening location. not required
+fwrite($writeOutput,  str_pad($patronData[$key]["instid"], 30, " ",STR_PAD_RIGHT)); //Institution id acts as a key for us.
+fwrite($writeOutput,  str_pad($empty, 11, " ")); //SSN in US format. Not used .
+fwrite($writeOutput,  str_pad($patronData[$key]["statCat"], 3, " ", STR_PAD_RIGHT)); // Statistical Category. Defined in SYSADMIN
+fwrite($writeOutput,  str_pad($empty, 27, " ")); //Rest of the statcats, we don't use.
+fwrite($writeOutput,  str_pad($nameType, 1, " ")); //1=personal 2=institutional
+fwrite($writeOutput,  str_pad($patronData[$key]["surname"], 30, " ", STR_PAD_RIGHT)); //patron surname
+fwrite($writeOutput,  str_pad($patronData[$key]["firstname"], 20, " ", STR_PAD_RIGHT)); //patron fist name
+fwrite($writeOutput,  str_pad($middleName, 20, " ",STR_PAD_RIGHT)); // patron middle name
+fwrite($writeOutput,  str_pad($title,10," ",STR_PAD_RIGHT)); // patron title
 //print str_pad($empty, 7, "0");
 //print (146);
 //print str_pad($empty, 9, "0");
@@ -84,32 +84,32 @@ print str_pad($title,10," ",STR_PAD_RIGHT); // patron title
 //print str_pad($empty, 28, "0");
 //print (11);
 //print str_pad($empty, 15, "0");
-print str_pad($empty, 65,"0"); //transaction counters. These are empty for new patrons.
-print str_pad($addressCount, 1, " "); //next lines are for address. first is mailing address
-print str_pad($addressID, 10, "0",STR_PAD_RIGHT);
-print str_pad($addressType, 1, " ");
-print str_pad($addressStatus, 1, " ");
-print str_pad($addressBegin,10," ");
-print str_pad($addressEnd,10," ");
-print str_pad($patronData[$key]["street"],50," ",STR_PAD_RIGHT);
-print str_pad($empty,160," ");
-print str_pad($patronData[$key]["city"], 40, " ",STR_PAD_RIGHT);
-print str_pad($empty,7, " ");
-print str_pad($patronData[$key]["zip"],10, " ",STR_PAD_RIGHT);
-print str_pad($country,20, " ",STR_PAD_RIGHT);
-print str_pad($phone,25," ",STR_PAD_RIGHT);
+fwrite($writeOutput,  str_pad($empty, 65,"0")); //transaction counters. These are empty for new patrons.
+fwrite($writeOutput,  str_pad($addressCount, 1, " ")); //next lines are for address. first is mailing address
+fwrite($writeOutput,  str_pad($addressID, 10, "0",STR_PAD_RIGHT));
+fwrite($writeOutput,  str_pad($addressType, 1, " "));
+fwrite($writeOutput,  str_pad($addressStatus, 1, " "));
+fwrite($writeOutput,  str_pad($addressBegin,10," "));
+fwrite($writeOutput,  str_pad($addressEnd,10," "));
+fwrite($writeOutput,  str_pad($patronData[$key]["street"],50," ",STR_PAD_RIGHT));
+fwrite($writeOutput,  str_pad($empty,160," "));
+fwrite($writeOutput,  str_pad($patronData[$key]["city"], 40, " ",STR_PAD_RIGHT));
+fwrite($writeOutput,  str_pad($empty,7, " "));
+fwrite($writeOutput,  str_pad($patronData[$key]["zip"],10, " ",STR_PAD_RIGHT));
+fwrite($writeOutput,  str_pad($country,20, " ",STR_PAD_RIGHT));
+fwrite($writeOutput,  str_pad($phone,25," ",STR_PAD_RIGHT));
 // Note that primary phone is - and mobi▒le phone is actual number
 // this is not defined here yet.
-print str_pad($empty,75," ");
-print str_pad($dateAdded,10," ");
-print str_pad($addressID2, 10, "0",STR_PAD_RIGHT);
-print str_pad($addressType2,1, " "); //second one is e-mail address.
-print str_pad($addressStatus, 1, " ");
-print str_pad($addressBegin2,10," ");
-print str_pad($addressEnd2,10," ");
-print str_pad($patronData[$key]["email"],50, " ");
-print str_pad($empty,337, " ");
-print str_pad($voyagerUpdated,10," ");
+fwrite($writeOutput,  str_pad($empty,75," "));
+fwrite($writeOutput,  str_pad($dateAdded,10," "));
+fwrite($writeOutput,  str_pad($addressID2, 10, "0",STR_PAD_RIGHT));
+fwrite($writeOutput,  str_pad($addressType2,1, " ")); //second one is e-mail address.
+fwrite($writeOutput,  str_pad($addressStatus, 1, " "));
+fwrite($writeOutput,  str_pad($addressBegin2,10," "));
+fwrite($writeOutput,  str_pad($addressEnd2,10," "));
+fwrite($writeOutput,  str_pad($patronData[$key]["email"],50, " "));
+fwrite($writeOutput,  str_pad($empty,337, " "));
+fwrite($writeOutput,  str_pad($voyagerUpdated,10," "));
 //print '\n;
 // print str_pad($input, 40, "0", STR_PAD_LEFT);
 }
