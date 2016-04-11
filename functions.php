@@ -60,7 +60,7 @@ if ($statCat == "") {
  if ($purgeDate == "") {
    die("Purge date required. Exiting!\n");
 } else {
-   echo "Purge date defined as: ".$statCat."\n";
+   echo "Purge date defined as: ".$purgeDate."\n";
 }
 return array($patronGroup, $statCat, $purgeDate);
 };
@@ -103,7 +103,6 @@ return array($inputFile,$outputFile,$logFile);
 }
 
 function importCSV($inputFile,$patronGroup,$statCat,$purgeDate) {
-   echo $patronGroup;
    $patron = array();
 
    $config = new LexerConfig();
