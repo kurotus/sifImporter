@@ -24,4 +24,4 @@ Only input file is required. Note that at the moment there is no validation of c
 
 ## License and copyright
 
-This project is licensed under the terms of **GNU General Public License Version 3**.
+This project is licensed under the terms of the **MIT license**.
