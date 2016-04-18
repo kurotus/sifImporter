@@ -1,6 +1,6 @@
 # sifImporter
 
-PHP client for importing patron information from registry to Voyager. 
+PHP client for importing patron information from registry to Voyager. Developed for University of Lapland Library.
 
 ## Installation
 
