@@ -6,7 +6,7 @@ PHP client for importing patron information from registry to Voyager. Developed 
 ## Installation
 
 ```
-Should be quite simple but instructions in progress.
+Should be quite simple but instructions are in progress.
 ```
 
 ## Usage
